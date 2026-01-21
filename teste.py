@@ -13,7 +13,7 @@ url = "https://apicadprev.trabalho.gov.br/DAIR_CARTEIRA?nr_cnpj_entidade=2913107
 nome_arquivo_csv = "dados_carteira_rpps.csv"
 try:
     logging.info(f"Buscando dados da API: {url}")
-    response = requests.get(url, timeout=60, verify=True)
+    response = requests.get(url, timeout=60, verify=False)
     response.raise_for_status() 
     logging.info(f"Sucesso! Status Code: {response.status_code}")
 
